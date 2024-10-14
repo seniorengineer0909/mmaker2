@@ -1,0 +1,30 @@
+import Decimal from 'decimal.js';
+import { Keypair } from '@solana/web3.js';
+export declare const getConfigs: () => Config;
+export interface Config {
+  workMord: string;
+  solanaRpcEndpoind: string;
+  rpcWebsocketEndpoint: string;
+  blockEngineUrl: string;
+  enableTrading: boolean;
+  intervalMarketMakerMin: number;
+  intervalMarketMakerMax: number;
+  tokenAddresses: string[];
+  swapAmountPercent: Decimal;
+  swapAmountPercentEma: number;
+  swapAmountMax: number;
+  swapAmountMin: number;
+  slippage: number;
+  emaApiKey: string;
+  emaLongTerm: number;
+  emaShortTerm: number;
+  emaCalcDuring: number;
+  jitoAuthKey: Keypair;
+  intervalTradeTrend: number;
+  startTime: string;
+  endTime: string;
+  priceImpact: number;
+  gasFeePercent: number;
+  gasFeesWallet: Keypair;
+  volumeAmount: number;
+}
